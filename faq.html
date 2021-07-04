@@ -29,6 +29,8 @@
 
         <link rel="stylesheet" href="js/core.messages/core.messages.min.css" type="text/css" media="all" />
         <link rel="stylesheet" href="js/magnific/magnific-popup.min.css" type="text/css" media="all" />
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     </head>
 
@@ -83,7 +85,7 @@
                                                     <a href="index.html">Home</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a href="contacts.html">FAQ</a>
+                                                    <a href="faq.html">FAQ</a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -162,7 +164,7 @@
                                                             <span class="sc_accordion_icon sc_accordion_icon_opened icon-minus"></span>
                                                             Where are you located and what are the facilities?
                                                         </h5>
-                                                        <div class="sc_accordion_content">
+                                                        <div id="location" class="sc_accordion_content">
                                                             <p>The QH courts are located at Torbert Ave. Paterson Reserve Quakers Hill. We have 2 tennis courts with off street parking and toilets. There are also other park facilities such as soccer fields, basketball courts, netball courts, cricket nets, a dog park and a kids play area.</p>
 															<p>The Jonas Bradley courts are located at Ponds Blvd, The Ponds. We have 4 tennis courts with off street parking and toilets. There are also other park facilities such as soccer fields, basketball courts and a kids play area.</p>
 														</div>
@@ -174,17 +176,7 @@
                                                             How do I get access to the courts and facilities?
                                                         </h5>
                                                         <div class="sc_accordion_content">
-                                                            <p>After booking you will be emailed instructions. 1 hour prior to your booking you will be smsed a keycode and further instructions. The keycode and/or key supplied will give you access to the tennis courts and toilet facilities at Paterson Reserve. At the end of your session you will need to lock up and any keys obtained will need to be returned.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sc_accordion_item odd">
-                                                        <h5 class="sc_accordion_title">
-                                                            <span class="sc_accordion_icon sc_accordion_icon_closed icon-plus"></span>
-                                                            <span class="sc_accordion_icon sc_accordion_icon_opened icon-minus"></span>
-                                                            The net is not up!
-                                                        </h5>
-                                                        <div class="sc_accordion_content">
-                                                            <p> Nets may be taken down and stored in the tennis room to avoid vandalism. For the majority of bookings the tennis nets will be up ready for use, but on the odd occassion you may need to put up the net yourself. Instructions for <a href="https://bit.ly/3hsTYUg" target="_blank"> putting up the tennis nets are here</a>. On the completion of your play, you do NOT have to put the nets away. But YOU MUST put the winder back in the tennis room to prevent theft.</p>
+                                                            <p>After booking you will be emailed instructions. 15 mins prior to your booking you will be smsed a keycode and further instructions. The keycode and/or key supplied will give you access to the tennis courts. At the end of your session you will need to lock up and any keys obtained will need to be returned.</p>
                                                         </div>
                                                     </div>
                                                     <div class="sc_accordion_item even">
@@ -227,7 +219,7 @@
                                                             Can I cancel my booking?
                                                         </h5>
                                                         <div class="sc_accordion_content">
-                                                            <p>You may cancel your booking 24 hours prior toof your booking. Refunds will be processed via Paypal within 24 hours. If you want to cancel after that period, please get in touch ASAP before your booking, and we may refund you or credit your next booking depending on the circumstances. Please be considerate to others who may have wanted to use your timeslot.</p>
+                                                            <p>You may cancel your booking 1 hour prior to your booking. Your account will be credited and you may use credits for future booking. Get in touch if you want a cash refund. Please be considerate to others who may have wanted to use your timeslot.</p>
                                                         </div>
                                                     </div>
                                                     <div class="sc_accordion_item even">
@@ -237,8 +229,7 @@
                                                             I want a regular booking.
                                                         </h5>
                                                         <div class="sc_accordion_content">
-                                                            <p>YES! You can make regular bookings online. If you make 10 or more bookings on the same timeslot a discount can be arranged.
-                                                                Get in touch if you want to pay upfront for 10 hours and be credited. You may use this credit to book future timeslots.
+                                                            <p>YES! You can make regular bookings online. You can purchase 10 sessions upfront for a discount. Your account will be credited and you can use these credits to book any future timeslots.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -263,7 +254,7 @@
                 <div class="copyright_wrap copyright_style_menu">
                     <div class="copyright_wrap_inner">
                         <div class="content_wrap">
-                            <div class="copyright_text">QHPondsTennis © 2020 All Rights Reserved
+                            <div id="copyright" class="copyright_text">QHPondsTennis © All Rights Reserved
                             </div>
                         </div>
                     </div>
@@ -289,6 +280,15 @@
         <script type="text/javascript" src="js/theme.init.min.js"></script>
         <script type="text/javascript" src="js/shortcodes.min.js"></script>
         <script type="text/javascript" src="js/core.messages/core.messages.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+              if (window.location.href.toUpperCase().indexOf("MARAYONG") > -1) {
+                $("#location").text("The courts are located at Davis Rd. Marayong Park, Marayong. We have 1 tennis court with off street parking and toilets. There are also other park facilities such as soccer fields, cricket nets and a kids play area.");
+                $("#copyright").text("MarayongTennis © All Rights Reserved");
+              }          
+            });
+        </script>
 
     </body>
 
